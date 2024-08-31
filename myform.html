@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My form for getting images</title>
+</head>
+<body>
+    <form id="gettingImageForm">
+        <label for="imagePath">Image name</label>
+        <input type="text" id="imagePath" name="imagePath">
+        <button type="button" id="previewButton">Get image</button>
+    </form>
+    <img id="imagePreview" src="">
+    <script>
+        document.getElementById('previewButton').addEventListener('click', function() {
+            var imagePath = document.getElementById('imagePath').value;
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = imagePath;
+        });
+    </script>
+</body>
+</html>
